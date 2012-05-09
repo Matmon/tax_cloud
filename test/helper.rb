@@ -19,7 +19,7 @@ end
 
 require 'vcr'
 
-VCR.config do |c|
+VCR.configure do |c|
   c.cassette_library_dir = 'test/cassettes'
   c.stub_with :webmock
   c.filter_sensitive_data('api-login-id')  { TaxCloud.configuration.api_login_id }

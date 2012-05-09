@@ -1,6 +1,5 @@
 require 'test/unit'
 require 'tax_cloud'
-require 'json'
 
 class Test::Unit::TestCase
   def setup

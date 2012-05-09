@@ -1,0 +1,4 @@
+--- # Use your taxcloud setting and copy this file to taxcloud_config.
+api_login_id: taxcloud_api_login_id
+api_key: taxcloud_api_key
+usps_username: usps_username

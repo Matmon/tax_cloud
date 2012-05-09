@@ -4,16 +4,17 @@ require 'json'
 
 class Test::Unit::TestCase
   def setup
+    config_file = File.join(File.dirname(__FILE__), 'taxcloud_config.yml')
     TaxCloud.configure do |config|
-      config.api_login_id = 'taxcloud_api_login_id'
-      config.api_key = 'taxcloud_api_key'
-      config.usps_username = 'usps_username'
+      YAML.load_file(config_file).each do |method, value|
+        config.send("#{method}=", value)
+      end
     end
   end
 end
 
 Savon.configure do |config|
-#  config.log = false
+  config.log = false
 end
 
 require 'vcr'

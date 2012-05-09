@@ -4,3 +4,4 @@ Gemfile.lock
 pkg/*
 doc/*
 html/*
+test/taxcloud_config.yml
